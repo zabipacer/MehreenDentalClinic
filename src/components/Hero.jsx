@@ -123,7 +123,7 @@ const HeroSection = () => {
       {/* CTAs */}
       <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
         <a
-          href="#booking"
+          href="https://api.whatsapp.com/send/?phone=923216739504&text&type=phone_number&app_absent=0"
           className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl text-base sm:text-lg font-semibold shadow-xl flex items-center justify-center gap-2 transition"
         >
           📅 Book Free Appointment
