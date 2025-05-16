@@ -39,7 +39,7 @@ export default function EmergencyDentistFaisalabad() {
             >
               WhatsApp Now
             </a>
-            <a href="tel:+923001234567" className="flex items-center gap-2 text-rose-600 font-medium">
+            <a href="tel:+03216739504" className="flex items-center gap-2 text-rose-600 font-medium">
               <PhoneCall size={20} /> Call Emergency Line
             </a>
           </div>

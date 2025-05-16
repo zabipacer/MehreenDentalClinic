@@ -37,7 +37,7 @@ export default function MaxillofacialSurgeryFaisalabad() {
             >
               WhatsApp Specialist
             </a>
-            <a href="tel:+923001234567" className="flex items-center gap-2 text-blue-700 font-medium">
+            <a href="tel:+03216739504" className="flex items-center gap-2 text-blue-700 font-medium">
               <PhoneCall size={20} /> Call for Appointment
             </a>
           </div>

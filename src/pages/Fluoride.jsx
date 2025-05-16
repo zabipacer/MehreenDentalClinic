@@ -137,7 +137,7 @@ export default function FluorideTreatment() {
           Don’t wait for cavities to appear. Protect your teeth today. Call or WhatsApp <strong>92 321 6739504</strong> to book your fluoride session.
         </p>
         <a
-          href="tel:92 321 6739504"
+          href="tel:+03216739504"
           className="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-700"
         >
           📞 Call Now

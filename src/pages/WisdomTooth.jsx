@@ -130,7 +130,7 @@ export default function WisdomToothExtractionLandingPage() {
           <p className="mt-4 text-gray-600">
             Don’t suffer from wisdom tooth pain. Schedule your consultation at Doctor Teeth Dental Clinic today and let our experts help you with a safe and efficient wisdom tooth extraction.
           </p>
-          <a href="tel:+923001234567" className="inline-block mt-6 bg-purple-600 text-white px-6 py-3 rounded-2xl shadow hover:bg-purple-700 transition">
+          <a href="tel:+923216739504" className="inline-block mt-6 bg-purple-600 text-white px-6 py-3 rounded-2xl shadow hover:bg-purple-700 transition">
             Call Now
           </a>
         </div>

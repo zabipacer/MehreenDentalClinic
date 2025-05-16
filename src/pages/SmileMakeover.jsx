@@ -111,7 +111,7 @@ export default function SmileMakeoverLandingPage() {
           <p className="mt-4 text-gray-600">
             Ready to begin your journey to a brighter smile? Contact us now to schedule your consultation at our Faisalabad clinic.
           </p>
-          <a href="tel:+923001234567" className="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-2xl shadow hover:bg-blue-700 transition">
+          <a href="tel:+03216739504" className="inline-block mt-6 bg-blue-600 text-white px-6 py-3 rounded-2xl shadow hover:bg-blue-700 transition">
             Call Now
           </a>
         </div>

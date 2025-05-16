@@ -84,7 +84,7 @@ const TeethScalingPolishingPage = () => {
         <meta property="og:title" content="Teeth Scaling & Polishing in Faisalabad | Doctor Teeth Dental Clinic" />
         <meta property="og:description" content="Get professional teeth scaling and polishing in Faisalabad at Doctor Teeth Dental Clinic. Affordable, pain-free dental care for a brighter smile!" />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://yourwebsite.com/teeth-scaling-polishing-faisalabad" />
+        <link rel="canonical" href="https://doctorteethclinic.com/teeth-scaling-polishing-faisalabad" />
         <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
       </Helmet>
 

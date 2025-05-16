@@ -33,7 +33,7 @@ export default function RootCanalLandingPage() {
             <a href="https://api.whatsapp.com/send/?phone=923216739504&text&type=phone_number&app_absent=0" className="bg-purple-600 text-white px-6 py-3 rounded-2xl shadow hover:bg-purple-700 transition">
               Book Appointment
             </a>
-            <a href="tel:+923001234567" className="flex items-center gap-2 text-purple-600 font-medium">
+            <a href="tel:+03216739504" className="flex items-center gap-2 text-purple-600 font-medium">
               <PhoneCall size={20} /> Call Now
             </a>
           </div>

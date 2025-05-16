@@ -126,7 +126,7 @@ export default function TMJTreatmentFaisalabad() {
             Let’s identify the root cause of your jaw pain and offer safe, personalized treatment. Schedule a specialist TMJ consultation today.
           </p>
           <a
-            href="tel:+923001234567"
+            href="tel:+923216739504"
             className="inline-block mt-6 bg-indigo-700 text-white px-6 py-3 rounded-2xl shadow hover:bg-indigo-800 transition"
           >
             Call Now for Appointment
