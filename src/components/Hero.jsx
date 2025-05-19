@@ -1,12 +1,59 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
+import './animations.css';
+
+const slides = [
+  {
+    title: "Painless Wisdom Tooth Extraction in Faisalabad",
+    description: "Get your wisdom tooth removed safely with zero pain and fast recovery. Trusted by 1,000+ patients.",
+    image: "slider.png",
+  },
+  {
+    title: "Braces & Aligners for Perfect Smile",
+    description: "Affordable orthodontic treatment in Faisalabad with clear aligners and metal braces. Monthly plans available.",
+    image: "slider.png",
+  },
+  {
+    title: "Root Canal Treatment with Zero Pain",
+    description: "Save your natural teeth with our advanced root canal procedures. Quick, painless, and highly rated.",
+    image: "slider.png",
+  },
+];
 
 const HeroSection = () => {
-  const schemaData = {
+  const [current, setCurrent] = useState(0);
+  const [direction, setDirection] = useState(1);
+  const [isHovered, setIsHovered] = useState(false);
+
+  const nextSlide = () => {
+    setDirection(1);
+    setCurrent((current + 1) % slides.length);
+  };
+  
+  const prevSlide = () => {
+    setDirection(-1);
+    setCurrent((current - 1 + slides.length) % slides.length);
+  };
+
+  useEffect(() => {
+    let timer;
+    if (!isHovered) {
+      timer = setInterval(() => {
+        setDirection(1);
+        setCurrent(prev => (prev + 1) % slides.length);
+      }, 6000);
+    }
+    return () => clearInterval(timer);
+  }, [isHovered, current]);
+
+  // ... (keep schemaData the same)
+const schemaData = {
     "@context": "https://schema.org",
     "@type": "Dentist",
     "name": "Doctor Teeth Dental Clinic",
-    "image": "https://doctorteethclinic.com/hero.jpg",
+    "image": slides[0].image,
     "url": "https://doctorteethclinic.com",
     "telephone": "+92-321-6739504",
     "priceRange": "PKR 500 - 5000",
@@ -21,27 +68,18 @@ const HeroSection = () => {
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": 31.401600145559254,
-      "longitude":  73.10403581167874
+      "longitude": 73.10403581167874
     },
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
-        "dayOfWeek": [
-          "Monday",
-          "Tuesday",
-          "Wednesday",
-          "Thursday",
-          "Friday",
-          "Saturday"
-        ],
-        "opens": "00:00",
-        
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "00:00"
       },
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": "Sunday",
-        "opens": "00:00",
-        
+        "opens": "00:00"
       }
     ],
     "aggregateRating": {
@@ -59,10 +97,7 @@ const HeroSection = () => {
         "@type": "EntryPoint",
         "urlTemplate": "https://wa.me/923216739504",
         "inLanguage": "en",
-        "actionPlatform": [
-          "https://schema.org/DesktopWebPlatform",
-          "https://schema.org/MobileWebPlatform"
-        ]
+        "actionPlatform": ["https://schema.org/DesktopWebPlatform", "https://schema.org/MobileWebPlatform"]
       },
       "result": {
         "@type": "Reservation",
@@ -70,89 +105,158 @@ const HeroSection = () => {
       }
     }
   };
+  // Responsive animation variants
+  const slideVariants = {
+    enter: (direction) => ({
+      x: direction > 0 ? '100vw' : '-100vw',
+      opacity: 0
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      transition: { 
+        type: "spring", 
+        stiffness: 300, 
+        damping: 30,
+        duration: 0.5 
+      }
+    },
+    exit: (direction) => ({
+      x: direction > 0 ? '-100vw' : '100vw',
+      opacity: 0
+    })
+  };
+
+  // Improved animation variants
+
+  const textVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: { 
+      y: 0, 
+      opacity: 1,
+      transition: { duration: 0.8, ease: "easeOut" }
+    }
+  };
+
+  const { title, description, image } = slides[current];
 
   return (
-<section className="relative pt-24 min-h-screen w-full flex items-center justify-center text-white overflow-hidden">
-  <Helmet>
-    <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
-  </Helmet>
+    <section 
+      className="relative bg-black min-h-screen w-full overflow-hidden font-sans"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <Helmet>
+        <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
+        <title>{title} | Doctor Teeth Clinic</title>
+        <meta name="description" content={description} />
+      </Helmet>
 
-  {/* Background */}
-  <div className="absolute inset-0">
-    <img
-      src="hero.jpg"
-      alt="Dentist with patient smiling"
-      className="w-full h-full object-cover"
-    />
-    <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-transparent" />
-  </div>
+      <AnimatePresence mode="popLayout" initial={false}>
+        <motion.div
+          key={current}
+          custom={direction}
+          variants={slideVariants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          className="absolute inset-0 z-0"
+        >
+          <motion.img
+            key={image} // Add key to force re-render
+            src={image}
+            alt={title}
+            className="w-full h-full object-cover object-center"
+            loading="eager"
+            initial={{ scale: 1.1 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 1.2, ease: "easeInOut" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-black/70 to-transparent md:bg-gradient-to-r" />
+        </motion.div>
+      </AnimatePresence>
 
-  {/* Content */}
-  <div className="relative z-10 max-w-7xl w-full px-4 sm:px-6 lg:px-12 py-16 flex flex-col lg:flex-row items-center justify-between gap-10">
-    
-    {/* Left Content */}
-    <div className="w-full lg:w-1/2 space-y-6 text-center lg:text-left">
-      <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight text-white drop-shadow-md">
-        🦷 Pain-Free Smiles in Faisalabad
-      </h1>
+      {/* Improved Navigation Arrows */}
+      <div className="absolute inset-0 flex items-center justify-between z-10 px-4">
+        <motion.button
+          className="p-2 md:p-3 rounded-full bg-black/30 hover:bg-black/50 text-white backdrop-blur-sm"
+          onClick={prevSlide}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          aria-label="Previous slide"
+        >
+          <FaArrowLeft className="w-6 h-6 md:w-8 md:h-8" />
+        </motion.button>
+        
+        <motion.button
+          className="p-2 md:p-3 rounded-full bg-black/30 hover:bg-black/50 text-white backdrop-blur-sm"
+          onClick={nextSlide}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.9 }}
+          aria-label="Next slide"
+        >
+          <FaArrowRight className="w-6 h-6 md:w-8 md:h-8" />
+        </motion.button>
+      </div>
 
-      <p className="text-xl sm:text-2xl font-medium text-green-300">
-        Trusted by 5,000+ Patients Since 2008
-      </p>
+      {/* Optimized Content */}
+      <div className="relative z-10 px-4 md:px-6 pt-40 md:pt-60 pb-12 text-center md:text-left text-white container mx-auto">
+        <div className="max-w-2xl xl:max-w-3xl mx-auto md:ml-0">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`text-${current}`}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+              variants={textVariants}
+            >
+              <h1 className="text-3xl md:text-4xl xl:text-5xl font-extrabold leading-tight md:leading-snug drop-shadow-lg">
+                {title}
+              </h1>
+              <p className="mt-3 md:mt-4 text-base md:text-xl text-white/90 max-w-2xl">
+                {description}
+              </p>
+            </motion.div>
+          </AnimatePresence>
 
-      <p className="text-base sm:text-lg text-gray-200 max-w-lg mx-auto lg:mx-0">
-        Modern, award-winning dental care — gentle treatments, same-day appointments, and a smile-first experience.
-      </p>
+          {/* ... (keep buttons section the same) */}
+            <motion.div 
+              className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-4 justify-center md:justify-start"
+              variants={textVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.4, duration: 0.8 }}
+            >
+              <motion.a
+                href="https://wa.me/923216739504"
+                className="bg-gradient-to-r from-blue-900 to-blue-700 hover:from-blue-800 hover:to-blue-600 text-white px-5 py-2 md:px-6 md:py-3 rounded-lg md:rounded-xl font-semibold text-base md:text-lg shadow-xl flex items-center justify-center gap-2"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span>📅</span> Book Appointment
+              </motion.a>
+              <motion.a
+                href="#services"
+                className="border border-white hover:bg-white hover:text-black px-5 py-2 md:px-6 md:py-3 rounded-lg md:rounded-xl font-semibold text-base md:text-lg shadow flex items-center justify-center gap-2"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <span>💼</span> View Services
+              </motion.a>
+            </motion.div>
 
-      {/* Features - trust badges */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-6 text-sm">
-        {[
-          { icon: "⭐", text: "4.9/5 Google Rating" },
-          { icon: "🧪", text: "Pain-Free Technology" },
-          { icon: "🏅", text: "15+ Years Experience" },
-        ].map((item, i) => (
-          <div
-            key={i}
-            className="backdrop-blur-sm bg-white/10 border border-white/20 rounded-lg px-4 py-3 flex items-center gap-2 justify-center shadow-md"
+          <motion.p 
+            className="mt-3 md:mt-4 text-xs md:text-sm text-gray-300"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.6 }}
           >
-            <span>{item.icon}</span> <span>{item.text}</span>
-          </div>
-        ))}
+            ✅ First Consultation Free • Only 3 Slots Left This Week
+          </motion.p>
+        </div>
       </div>
-
-      {/* CTAs */}
-      <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-        <a
-          href="https://api.whatsapp.com/send/?phone=923216739504&text&type=phone_number&app_absent=0"
-          className="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl text-base sm:text-lg font-semibold shadow-xl flex items-center justify-center gap-2 transition"
-        >
-          📅 Book Free Appointment
-        </a>
-        <a
-          href="#services"
-          className="border border-white text-white px-6 py-3 rounded-xl text-base sm:text-lg font-semibold hover:bg-white hover:text-black transition shadow"
-        >
-          💼 View Our Services
-        </a>
-      </div>
-
-      <p className="mt-4 text-sm text-gray-300">
-        ✅ First Consultation is 100% Free • Only 3 Slots Left This Week
-      </p>
-    </div>
-
-    {/* Right Side - doctor image or branding */}
-    <div className="hidden lg:flex items-center justify-center lg:w-1/2">
-      <img
-        src="https://doctorteethclinic.com/DL.jpeg"
-        alt="Doctor Teeth"
-        className="w-[400px] rounded-xl shadow-2xl border-4 border-white/20"
-      />
-    </div>
-  </div>
-</section>
-
-);
+    </section>
+  );
 };
 
 export default HeroSection;
