@@ -11,14 +11,19 @@ import LocalSEOSection from './components/LocalMAp'
 import FaqAccordion from './components/FAQS'
 import Footer from './components/Footer'
 import TestimonialsA from './components/ApiTestimonial'
+import TopBar from './components/TopBar'
+import AppointmentBanner from './components/Appointmentbanner'
+import DoctorTeethIntro from './components/DTIntro'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
+  
 <HeroSection/>
-
+<AppointmentBanner/>
+<DoctorTeethIntro/>
 <FeaturedServices/>
 <WhyChooseUs/>
 

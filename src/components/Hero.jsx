@@ -1,24 +1,29 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Helmet } from "react-helmet";
+import { useIsMobile } from "./IsMobile";
 
 const slides = [
   {
     title: "Painless Wisdom Tooth Extraction in Faisalabad",
     text: "Get your wisdom tooth removed safely with zero pain and fast recovery. Trusted by 1,000+ patients.",
-    image: "slider.png",
+    image: "b2.png",
+    mobileImage: "mobile1.jpg",
   },
   {
     title: "Braces & Aligners for Perfect Smile",
     text: "Affordable orthodontic treatment in Faisalabad with clear aligners and metal braces. Monthly plans available.",
-    image: "slider.png",
+    image: "b2.png",
+    mobileImage: "mobile1.jpg",
   },
   {
     title: "Root Canal Treatment with Zero Pain",
     text: "Save your natural teeth with our advanced root canal procedures. Quick, painless, and highly rated.",
-    image: "slider.png",
+    image: "b2.png",
+    mobileImage: "mobile1.jpg",
   },
 ];
+
 
 const schemaData = {
   "@context": "https://schema.org",
@@ -79,6 +84,7 @@ const schemaData = {
 
 export default function HeroSection() {
   const [current, setCurrent] = useState(0);
+const isMobile = useIsMobile();
 
   const nextSlide = () => {
     setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
@@ -96,27 +102,27 @@ export default function HeroSection() {
 
       <AnimatePresence mode="wait">
         <motion.img
-          key={slides[current].image + current}
-          src={slides[current].image}
+             key={(isMobile ? slides[current].mobileImage : slides[current].image) + current}
+    src={isMobile ? slides[current].mobileImage : slides[current].image}
           alt={slides[current].title}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
-          className="absolute inset-0 w-full h-full object-cover z-0"
+          className="absolute inset-0 w-full h-full object-none sm:object-cover z-0"
         />
       </AnimatePresence>
 
-      <div className="absolute inset-0 bg-black/50 z-10"></div>
+      <div className="absolute inset-0  z-10"></div>
 
-      <div className="absolute left-10 top-1/2 transform -translate-y-1/2 z-20 text-white max-w-xl space-y-4">
+      <div className="absolute left-10 top-1/2 transform -translate-y-1/2 z-20 max-w-xl space-y-4">
         <motion.h1
           key={slides[current].title}
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl md:text-5xl font-bold"
+          className="text-4xl font-sans md:text-5xl font-bold"
         >
           {slides[current].title}
         </motion.h1>

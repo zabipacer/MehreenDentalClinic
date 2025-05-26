@@ -8,55 +8,47 @@ export const Navbar = () => {
     const element = document.getElementById('contact-form');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setMenuOpen(false); // Close menu on mobile after click
+      setMenuOpen(false);
     }
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 bg-white/10 backdrop-blur-md border-b border-white/20 text-white">
-      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo with text */}
-        <div className="flex items-center gap-2">
-         <Link to={"/"}
-         ><img
+    <nav className="w-full z-50 bg-white shadow-sm border-b border-gray-200">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+        {/* Logo + Clinic Name */}
+        <Link to="/" className="flex items-center gap-4">
+          <img
             src="/DL.jpeg"
             alt="Doctor Teeth Clinic Logo"
-            className="w-15 h-15 rounded-full mr-5 object-cover"
-          /></Link> 
-          <div className="text-2xl font-bold">
-            Doctor Teeth Clinic Faisalabad
-          </div>
-        </div>
+            className="w-12 h-12 rounded-full object-cover"
+          />
+          <span className="text-xl sm:text-2xl  text-blue-800 font-extrabold ">
+            Doctor Teeth Clinic
+          </span>
+        </Link>
 
-        {/* Desktop Links */}
-        <div className="hidden md:flex gap-6 items-center">
-          <a href="#services" className="hover:underline">
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center gap-6 text-gray-700 text-sm font-medium">
+          <a href="#services" className="hover:text-blue-700 transition">
             Services
           </a>
-          <a href="#testimonials" className="hover:underline">
+          <a href="#testimonials" className="hover:text-blue-700 transition">
             Testimonials
           </a>
-          <a href="#about" className="hover:underline">
+          <a href="#about" className="hover:text-blue-700 transition">
             About
           </a>
-          <a
-            href="https://wa.me/923216739504"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white text-blue-700 px-5 py-2 rounded-full font-medium hover:bg-blue-100 transition"
-          >
-            Book Appointment
-          </a>
+         
         </div>
 
-        {/* Mobile Hamburger Icon */}
+        {/* Mobile Hamburger */}
         <div className="md:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="focus:outline-none"
+            className="text-blue-900 focus:outline-none"
           >
             <svg
-              className="w-6 h-6 text-white"
+              className="w-7 h-7"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -83,37 +75,17 @@ export const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-blue-900 text-white px-6 py-6 space-y-4 text-center shadow-lg">
-          <a
-            href="#services"
-            className="block hover:underline"
-            onClick={() => setMenuOpen(false)}
-          >
+        <div className="md:hidden bg-white text-blue-900 px-6 py-4 space-y-3 text-center shadow-inner border-t border-gray-200">
+          <a href="#services" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">
             Services
           </a>
-          <a
-            href="#testimonials"
-            className="block hover:underline"
-            onClick={() => setMenuOpen(false)}
-          >
+          <a href="#testimonials" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">
             Testimonials
           </a>
-          <a
-            href="#about"
-            className="block hover:underline"
-            onClick={() => setMenuOpen(false)}
-          >
+          <a href="#about" onClick={() => setMenuOpen(false)} className="block hover:text-blue-600">
             About
           </a>
-          <a
-            href="https://wa.me/923216739504"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-white text-blue-700 px-5 py-2 rounded-full font-medium hover:bg-blue-100 transition block mx-auto w-fit"
-            onClick={() => setMenuOpen(false)}
-          >
-            Book Appointment
-          </a>
+        
         </div>
       )}
     </nav>
