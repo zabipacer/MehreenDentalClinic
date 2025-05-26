@@ -60,7 +60,7 @@ const Footer = () => {
               <FaFacebookF className="text-lg hover:text-blue-300" />
             </a>
             
-            <a href="https://wa.me/923334271398" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <a href="https://wa.me/9232167395048" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
               <FaWhatsapp className="text-lg hover:text-green-300" />
             </a>
           </div>
