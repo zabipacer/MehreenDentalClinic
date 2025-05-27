@@ -5,11 +5,14 @@ export default function TopBar() {
     <div className="bg-[#494949] text-white text-sm py-2 px-4 flex justify-between items-center">
       {/* Mobile View */}
       <div className="flex sm:hidden pb-2 pt-2 justify-between w-full items-center">
-        <Instagram className="w-8 h-8 text-[#A6BF39] cursor-pointer transition-transform duration-200 hover:scale-110" />
-        <button className="bg-[#A6BF39] cursor-pointer text-black px-3 py-1.5 rounded text-sm font-semibold transition duration-200 hover:bg-[#90aa32] hover:scale-105">
+       <a href="https://www.facebook.com/doctorteethdental"   target="_blank"
+  rel="noopener noreferrer"><Facebook className="w-6 h-6 text-[#A6BF39] cursor-pointer transition-transform duration-200 hover:scale-110" />  </a>
+          
+   <button className="bg-[#A6BF39] cursor-pointer text-black px-3 py-1.5 rounded text-sm font-semibold transition duration-200 hover:bg-[#90aa32] hover:scale-105">
           Book appointment
         </button>
-        <Facebook className="w-8 h-8 text-[#A6BF39] cursor-pointer transition-transform duration-200 hover:scale-110" />
+   <a  href="https://www.instagram.com/doctorteethclinic/"   target="_blank"
+  rel="noopener noreferrer">     <Instagram className="w-6 h-6 text-[#A6BF39] cursor-pointer transition-transform duration-200 hover:scale-110" /></a>
       </div>
 
       {/* Desktop View */}
