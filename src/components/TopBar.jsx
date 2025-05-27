@@ -29,8 +29,11 @@ export default function TopBar() {
         {/* Right: Social Icons & Buttons */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4 text-base w-full sm:w-auto">
           <div className="flex items-center space-x-3">
-            <Instagram className="w-6 h-6 text-[#A6BF39] cursor-pointer transition-transform duration-200 hover:scale-110" />
-            <Facebook className="w-6 h-6 text-[#A6BF39] cursor-pointer transition-transform duration-200 hover:scale-110" />
+          <a href="https://www.facebook.com/doctorteethdental"   target="_blank"
+  rel="noopener noreferrer"><Facebook className="w-6 h-6 text-[#A6BF39] cursor-pointer transition-transform duration-200 hover:scale-110" />  </a>
+          
+   <a  href="https://www.instagram.com/doctorteethclinic/"   target="_blank"
+  rel="noopener noreferrer">     <Instagram className="w-6 h-6 text-[#A6BF39] cursor-pointer transition-transform duration-200 hover:scale-110" /></a>
           </div>
 
           {/* Divider */}

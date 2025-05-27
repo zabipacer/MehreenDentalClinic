@@ -19,12 +19,12 @@ const testimonials = [
   {
     name: "Muhammad Ibrahim",
     text: "Very competent and humble doctor.",
-    image: "/T3.jpg",
+    image: "/ibrahim.png",
   },
   {
     name: "Dr. Urooj Muddasar",
     text: "I went to doctor for the solution of my broken teeth. He treated me very well; the procedure he opted was professional.",
-    image: "/T3.jpg",
+    image: "/urooj.png",
   },
   {
     name: "Faisal Ramzii",
@@ -136,7 +136,7 @@ const Testimonials = () => {
 
           <div className="bg-gray-50 p-5 rounded-lg border border-gray-200 text-left shadow-sm max-w-2xl mx-auto">
             <strong className="block mb-2 text-blue-700">Transcript:</strong>
-            “I searched everywhere for a <strong>cosmetic dentist in Faisalabad</strong>, and when I found Dr. Ali, everything changed. From the initial consultation to the final smile reveal, every step was smooth, professional, and surprisingly comfortable. If you're looking for the <strong>best smile makeover in Faisalabad</strong>, this is where you go.”
+            “I searched everywhere for a <strong>cosmetic dentist in Faisalabad</strong>, and when I found Dr. Tajwer Hussain, everything changed. From the initial consultation to the final smile reveal, every step was smooth, professional, and surprisingly comfortable. If you're looking for the <strong>best smile makeover in Faisalabad</strong>, this is where you go.”
           </div>
 
           <a

@@ -63,7 +63,7 @@ const services = [
   {
     title: 'Dental Fillings',
     description: 'Tooth-colored composite fillings that match your natural tooth enamel and prevent future decay.',
-    image: 'df.png',
+    image: 'fil.png',
     link: '/Dental-Fillings-faisalabad',
   },
   {
@@ -137,7 +137,12 @@ const services = [
     image: '/jaw.png',
     link: '/tmj-treatment-faisalabad',
   },
-
+{
+title:"Zarconia crown",
+description:"Restore your smile with our realistic looking zirconia crown",
+image:"/zirconia1.png",
+link:"/tmj-treatment-faisalabad"
+}
   // ... (Update other service objects similarly with images and enhanced descriptions)
 ];
 
