@@ -29,37 +29,37 @@ const testimonials = [
   {
     name: "Faisal Ramzii",
     text: "Keepin' it simple, I came to Pak from KSA and visited Dr. Tajwer. After consulting and getting quotes from others, I chose them.",
-    image: "/T3.jpg",
+    image: "/faisal.png",
   },
   {
     name: "Amir James",
     text: "Doctor Mohsin Refique is very nice. He provided exceptional care and service.",
-    image: "/T3.jpg",
+    image: "/amir1.png",
   },
   {
     name: "Shahid Rasool",
     text: "Extraordinary satisfaction! Very friendly and experienced doctor. Highly recommended.",
-    image: "/T3.jpg",
+    image: "/shahid.png",
   },
   {
     name: "Nauman Sabir",
     text: "Doc was very friendly and walked me through the entire process. Great experience!",
-    image: "/T3.jpg",
+    image: "/nauman.png",
   },
   {
     name: "Areej Kashif",
     text: "Excellent experience with my family. Doctor was very friendly and efficient. Highly recommended Dr. Tajwer!",
-    image: "/T3.jpg",
+    image: "/areej.png",
   },
   {
     name: "Kashif Ali",
     text: "Best in town. Affordable, excellent, and quick service. Highly recommended.",
-    image: "/T3.jpg",
+    image: "/kashif.png",
   },
   {
     name: "Kiran Kashif",
     text: "Very professional. Satisfied Alhamdulillah.",
-    image: "/T3.jpg",
+    image: "/kiran.png",
   },
 ];
 
