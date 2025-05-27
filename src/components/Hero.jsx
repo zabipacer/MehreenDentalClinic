@@ -109,9 +109,10 @@ const isMobile = useIsMobile();
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.8 }}
-          className="absolute inset-0 w-full h-full object-none sm:object-cover z-0"
+          className="absolute inset-0 w-full h-full object-cover z-0"
         />
       </AnimatePresence>
+<div className="absolute inset-0 z-10 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
 
       <div className="absolute inset-0  z-10"></div>
 
