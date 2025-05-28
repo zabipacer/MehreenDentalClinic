@@ -24,6 +24,8 @@ import EmergencyDentistFaisalabad from "./pages/Emergency";
 import MaxillofacialSurgeryFaisalabad from "./pages/Maxillofacial";
 import TMJTreatmentFaisalabad from "./pages/Tmj";
 import DentalCheckupLandingPage from "./pages/DentalCeckup";
+import BlogsPage from "./pages/Blogs";
+import BlogDetailPage from "./pages/BlogDetails";
 
 const router = createBrowserRouter([
   {
@@ -119,7 +121,16 @@ const router = createBrowserRouter([
     path: "/dental-checkup-faisalabad", // Home route
     element: <DentalCheckupLandingPage/>, // Show App component in the Layout
 
-  },  // Add more routes here as needed
+  },
+  {
+    path: "/blogs", // Home route
+    element: <BlogsPage/>, // Show App component in the Layout
+
+  },
+  {
+    path:"/blogs/:id/:slug",
+    element:<BlogDetailPage/>
+  }  // Add more routes here as needed
     ],
   },
 ]);

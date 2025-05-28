@@ -29,14 +29,17 @@ export const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6 text-gray-700 text-sm font-medium">
-          <a href="#services" className="hover:text-blue-700 transition">
+          <a href="/#services" className="hover:text-blue-700 transition">
             Services
           </a>
-          <a href="#testimonials" className="hover:text-blue-700 transition">
+          <a href="/#testimonials" className="hover:text-blue-700 transition">
             Testimonials
           </a>
-          <a href="#about" className="hover:text-blue-700 transition">
+          <a href="/#about" className="hover:text-blue-700 transition">
             About
+          </a>
+          <a href="/blogs" className="hover:text-blue-700 transition">
+            Blogs
           </a>
          
         </div>
