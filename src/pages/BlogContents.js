@@ -2,7 +2,500 @@
 
 export const blogContents = {
   1: `
-  <section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Dental Care - Satiana Road, Faisalabad</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --secondary-gradient: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            --accent-gradient: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+            --success-gradient: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --card-bg: rgba(15, 23, 42, 0.8);
+            --text-light: #f1f5f9;
+            --text-muted: #cbd5e1;
+            --text-dark: #0f172a;
+            --shadow-soft: 0 20px 40px rgba(15, 23, 42, 0.1);
+            --shadow-medium: 0 30px 60px rgba(15, 23, 42, 0.15);
+            --shadow-strong: 0 40px 80px rgba(15, 23, 42, 0.2);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text-light);
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 25%, #334155 50%, #475569 75%, #64748b 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .floating-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(59, 130, 246, 0.4);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0px);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) translateX(100px);
+                opacity: 0;
+            }
+        }
+
+        header {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 30px;
+            padding: 4rem 3rem;
+            max-width: 800px;
+            margin: 2rem;
+            box-shadow: var(--shadow-strong);
+            transform: translateY(0);
+            animation: heroFloat 6s ease-in-out infinite;
+        }
+
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 50%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+            animation: textGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes textGlow {
+            from { filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.3)); }
+            to { filter: drop-shadow(0 0 40px rgba(59, 130, 246, 0.6)); }
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 2.5rem;
+            opacity: 0.9;
+        }
+
+        main {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            padding: 3rem;
+            margin: 3rem 0;
+            box-shadow: var(--shadow-medium);
+            transform: translateY(50px);
+            opacity: 0;
+            animation: slideUp 0.8s ease forwards;
+            position: relative;
+            overflow: hidden;
+        }
+
+        section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.05), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        @keyframes slideUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        section:nth-child(even) {
+            animation-delay: 0.2s;
+        }
+
+        section:nth-child(odd) {
+            animation-delay: 0.4s;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--accent-gradient);
+            border-radius: 2px;
+            animation: expandLine 2s ease infinite;
+        }
+
+        @keyframes expandLine {
+            0%, 100% { width: 60px; }
+            50% { width: 120px; }
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin: 2rem 0 1.5rem 0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        h3::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 30px;
+            background: var(--success-gradient);
+            border-radius: 2px;
+        }
+
+        h4 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            text-align: justify;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .service-card {
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--secondary-gradient);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(15, 23, 42, 0.3);
+            border-color: rgba(59, 130, 246, 0.4);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(8, 145, 178, 0.1) 100%);
+            border: 2px solid rgba(6, 182, 212, 0.3);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-box::before {
+            content: '💡';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        .emergency-alert {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(220, 38, 38, 0.15) 100%);
+            border: 2px solid rgba(239, 68, 68, 0.4);
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 2rem 0;
+            position: relative;
+            animation: emergencyPulse 3s infinite;
+        }
+
+        @keyframes emergencyPulse {
+            0%, 100% { 
+                box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+            }
+            50% { 
+                box-shadow: 0 0 0 20px rgba(239, 68, 68, 0);
+            }
+        }
+
+        .emergency-alert::before {
+            content: '🚨';
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            animation: spin 4s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            position: relative;
+            padding: 1rem 0 1rem 2.5rem;
+            margin-bottom: 1rem;
+            background: rgba(15, 23, 42, 0.4);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+        }
+
+        li::before {
+            content: '✓';
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: var(--success-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+            font-size: 0.8rem;
+        }
+
+        li:hover {
+            background: rgba(15, 23, 42, 0.6);
+            transform: translateX(10px);
+        }
+
+        footer {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            border-radius: 25px;
+            padding: 4rem 3rem;
+            margin: 3rem 2rem;
+            text-align: center;
+            box-shadow: var(--shadow-strong);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary-gradient);
+            color: white;
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.4);
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content {
+                padding: 2rem 1.5rem;
+                margin: 1rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 2rem 1.5rem;
+                margin: 2rem 1rem;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            main {
+                padding: 0 1rem;
+            }
+        }
+
+        /* Scroll animations */
+        @media (prefers-reduced-motion: no-preference) {
+            section {
+                animation-duration: 1s;
+            }
+        }
+
+        strong {
+            color: var(--text-light);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-particles"></div>
+
+    <header>
+        <div class="hero-content">
+            <h1>Premium Dental Care</h1>
+            <p>Experience world-class dental services near Satiana Road, Faisalabad with cutting-edge technology and compassionate care</p>
+        </div>
+    </header>
+
+    <main>
+        <section>
             <h2>Finding Quality Dental Care Near Satiana Road, Faisalabad</h2>
             <p>The Satiana Road area of Faisalabad has experienced significant growth in healthcare services over the past decade, with numerous dental clinics establishing themselves to serve the local community. This bustling commercial and residential hub offers residents convenient access to a variety of dental care options, from general family dentistry to specialized treatments.</p>
             
@@ -150,93 +643,7 @@ export const blogContents = {
                 <li><strong>Valid identification:</strong> Valid identification is typically required for new patients and may be requested for verification purposes at established practices. Bring a government-issued photo ID such as a national identity card or passport.</li>
                 <li><strong>Insurance cards:</strong> Insurance cards, if you have dental insurance, should be brought to every appointment. Even if the office has your insurance information on file, bringing your current cards ensures that they have the most up-to-date information.</li>
                 <li><strong>Previous dental records:</strong> Previous dental records, including X-rays, treatment history, and records from other dental practices, can provide valuable information for your new dentist.</li>
-                <li><strong>Payment information:</strong> Payment method information should be prepared based on the practice's accepted payment options. This might include credit cards, cash, or information needed to set up payment plans if applicable.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Dental Care Costs and Insurance Near Satiana Road Faisalabad</h2>
-            
-            <h3>Understanding Dental Pricing</h3>
-            <p>Average costs for common procedures vary among dental practices near Satiana Road, but understanding typical price ranges can help you budget for dental care and compare options. Routine cleanings and checkups are generally the most affordable services, while specialized treatments like implants or orthodontics represent larger investments.</p>
-            
-            <p>Several factors affect treatment costs, including the complexity of your specific case, the materials used, the experience level of the dentist, and the technology employed. Geographic location, overhead costs, and practice philosophy also influence pricing decisions.</p>
-            
-            <p>Payment plan options are increasingly common in dental practices, making expensive treatments more accessible to patients who prefer to spread costs over time. Many practices offer interest-free payment plans for qualified patients, while others work with third-party financing companies that specialize in healthcare financing.</p>
-            
-            <p>Insurance coverage details can be complex, and understanding your specific benefits is crucial for planning dental treatment. Most dental insurance plans cover preventive care fully or with minimal copayments, while major treatments may be covered at 50-80% after deductibles are met.</p>
-
-            <h3>Affordable Dental Care Options</h3>
-            <p>Community dental programs occasionally operate in the Faisalabad area, providing reduced-cost dental care for qualifying individuals and families. These programs may be sponsored by government agencies, non-profit organizations, or community health initiatives.</p>
-            
-            <p>Dental colleges and training centers sometimes offer discounted dental services provided by students under professional supervision. While treatments may take longer than in private practice, the quality of care is typically excellent, and the cost savings can be substantial.</p>
-            
-            <p>Government healthcare initiatives may include dental care components, particularly for children, pregnant women, and other vulnerable populations. Research available programs to determine if you qualify for any government-sponsored dental benefits.</p>
-            
-            <p>Preventive care benefits are often the most generous aspect of dental insurance coverage. Taking full advantage of covered preventive services like cleanings, checkups, and fluoride treatments can help you avoid more expensive treatments while maintaining optimal oral health.</p>
-        </section>
-
-        <section>
-            <h2>Maintaining Oral Health Between Visits</h2>
-            
-            <h3>Daily Oral Hygiene Routine</h3>
-            <p>Proper brushing techniques form the foundation of good oral hygiene. Brush at least twice daily using fluoride toothpaste and a soft-bristled toothbrush. Spend at least two minutes brushing, using gentle circular motions to clean all tooth surfaces. Replace your toothbrush every three to four months or sooner if bristles become frayed.</p>
-            
-            <p>Flossing importance cannot be overstated, as it removes plaque and food particles from between teeth where toothbrushes cannot reach. Daily flossing helps prevent gum disease and tooth decay in these vulnerable areas. If traditional floss is difficult to use, consider alternatives like water flossers or floss picks.</p>
-            
-            <p>Mouthwash recommendations vary depending on your specific oral health needs. Antimicrobial mouthwashes can help reduce bacteria that cause gum disease, while fluoride rinses provide additional protection against tooth decay. Consult with your dentist about which type of mouthwash, if any, would benefit your oral health routine.</p>
-            
-            <div class="highlight-box">
-                <p><strong>Diet Impact:</strong> Diet and nutrition impact oral health significantly. Limit sugary and acidic foods and beverages, which contribute to tooth decay and enamel erosion. Eat a balanced diet rich in calcium, phosphorus, and vitamins that support strong teeth and healthy gums. Stay hydrated with water, which helps wash away food particles and bacteria.</p>
-            </div>
-
-            <h3>When to Schedule Follow-up Appointments</h3>
-            <p>Regular checkup intervals are typically every six months for most patients, but some individuals may benefit from more frequent visits based on their risk factors for dental disease. Your dentist will recommend an appropriate schedule based on your oral health status and individual needs.</p>
-            
-            <p>Signs requiring immediate attention include persistent tooth pain, swelling, bleeding gums, loose teeth, or any changes in your mouth that concern you. Don't wait for your scheduled appointment if you experience these symptoms; contact your dental office promptly.</p>
-            
-            <p>Seasonal dental care considerations might include scheduling cleanings before holidays or important events, addressing sensitivity issues before summer activities, or timing treatments to align with insurance benefit years.</p>
-        </section>
-
-        <section>
-            <h2>Emergency Dental Care Near Satiana Road</h2>
-            
-            <h3>Common Dental Emergencies</h3>
-            <div class="emergency-alert">
-                <p><strong>Emergency Situations:</strong> Severe toothache often indicates infection or significant decay requiring immediate attention. While waiting for emergency care, over-the-counter pain relievers and cold compresses can provide temporary relief, but professional treatment is essential to address the underlying problem.</p>
-            </div>
-            
-            <p>Knocked-out teeth constitute true dental emergencies where time is critical. If possible, gently rinse the tooth without touching the root, and try to reinsert it into the socket. If reinsertion isn't possible, keep the tooth moist in milk or saliva and seek emergency dental care within an hour for the best chance of successful reattachment.</p>
-            
-            <p>Broken or chipped teeth should be evaluated promptly, especially if the damage exposes the tooth's interior or creates sharp edges that could cause injury. Save any broken pieces and rinse your mouth with warm water while seeking professional care.</p>
-            
-            <p>Dental trauma from accidents or sports injuries can affect teeth, gums, and supporting structures. Even if damage isn't immediately apparent, traumatic injuries should be evaluated by a dental professional to assess for hidden damage and prevent complications.</p>
-
-            <h3>Finding Emergency Dental Services</h3>
-            <p>24-hour dental clinics are relatively uncommon, but some practices near Satiana Road offer extended hours or emergency contact numbers for urgent situations. Research emergency options before you need them, and keep contact information readily available.</p>
-            
-            <p>Hospital emergency departments can provide pain management and antibiotic treatment for dental infections, but they typically cannot perform definitive dental treatments. Emergency rooms are appropriate for severe infections, significant trauma, or situations where dental pain is accompanied by fever or difficulty swallowing.</p>
-            
-            <p>On-call dentist services may be available through your regular dental practice or through dental emergency services in the Faisalabad area. These services often involve higher fees than regular appointments but provide access to professional care when urgent treatment is needed.</p>
-            
-            <p>First aid for dental emergencies can provide temporary relief while seeking professional care. Keep a dental emergency kit that includes pain relievers, temporary filling material, and contact information for emergency dental services.</p>
-        </section>
-    </main>
-
-    <footer>
-        <div class="cta-section">
-            <h2>Take the Next Step in Your Oral Health Journey</h2>
-            <p>Finding the best dentist near Satiana Road in Faisalabad requires careful consideration of your individual needs, preferences, and circumstances. The area offers numerous quality dental care options, from general family dentistry to specialized treatments, making it possible to find comprehensive oral healthcare close to home.</p>
-            
-            <p>Remember that the "best" dentist for you is one who combines professional expertise with a communication style and approach to care that makes you feel comfortable and confident. Take time to research your options, ask questions, and choose a dental professional who demonstrates commitment to your long-term oral health.</p>
-            
-            <p>Regular dental care is an investment in your overall health and quality of life. By establishing a relationship with a trusted dentist near Satiana Road and maintaining consistent oral hygiene habits, you can enjoy the benefits of optimal oral health for years to come.</p>
-            
-            <a href="#" class="cta-button">Schedule Your Consultation Today</a>
-            
-            <p style="margin-top: 20px;"><strong>Ready to take the next step in your oral health journey? Contact a reputable dental practice near Satiana Road today to schedule your consultation and experience quality dental care that prioritizes your comfort, health, and satisfaction. Don't wait – your smile deserves the best care available.</strong></p>
-        </div>
-    </footer> `,
+                <li><strong>Payment information:</strong> Payment method information should be prepared based on `,
   2: `
 
    <!DOCTYPE html>
