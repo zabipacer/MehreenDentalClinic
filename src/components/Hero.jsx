@@ -7,20 +7,20 @@ const slides = [
   {
     title: "Painless Wisdom Tooth Extraction in Faisalabad",
     text: "Get your wisdom tooth removed safely with zero pain and fast recovery. Trusted by 1,000+ patients.",
-    image: "/public/assets/images/b2-min.png",
-    mobileImage: "/public/assets/images/mobile1.jpg",
+    image: "/assets/images/b2-min.png",
+    mobileImage: "/assets/images/mobile1.jpg",
   },
   {
     title: "Braces & Aligners for Perfect Smile",
     text: "Affordable orthodontic treatment in Faisalabad with clear aligners and metal braces. Monthly plans available.",
-    image: "/public/assets/images/b2-min.png",
+    image: "/assets/images/b2-min.png",
     mobileImage: "/public/assets/images/mobile1.jpg",
   },
   {
     title: "Root Canal Treatment with Zero Pain",
     text: "Save your natural teeth with our advanced root canal procedures. Quick, painless, and highly rated.",
-    image: "/public/assets/images/b2-min.png",
-    mobileImage: "/public/assets/images/mobile1.jpg",
+    image: "/assets/images/b2-min.png",
+    mobileImage: "/assets/images/mobile1.jpg",
   },
 ];
 

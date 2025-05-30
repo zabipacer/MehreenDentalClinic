@@ -23,19 +23,19 @@ const services = [
   {
     title: 'Dental Checkup in Faisalabad',
     description: 'Professional dental exams with advanced diagnostics including oral cancer screening and digital X-rays for complete oral health assessment.',
-    image: '/public/assets/images/dc.png',
+    image: '/assets/images/dc.png',
     link: '/dental-checkup-faisalabad',
   },
   {
     title: 'Scaling & Polishing',
     description: 'Advanced ultrasonic cleaning to remove tartar and plaque buildup, preventing gum disease and ensuring long-term dental health.',
-    image: '/public/assets/images/Scp.png',
+    image: '/assets/images/Scp.png',
     link: '/scaling-and-polishing-in-faisalabad',
   },
   {
     title: 'Fluoride Treatment',
     description: 'Professional fluoride application to strengthen tooth enamel and prevent cavities in adults and children.',
-    image: '/public/assets/images/ft.png',
+    image: '/assets/images/ft.png',
     link: '/Fluoride-Treatment-in-faisalabad',
   },
 
@@ -43,19 +43,19 @@ const services = [
   {
     title: 'Teeth Whitening Faisalabad',
     description: 'Chairside LED-accelerated whitening treatment for 8 shades brighter smile in under an hour, using enamel-safe solutions.',
-    image: '/public/assets/images/tw.png',
+    image: '/assets/images/tw.png',
     link: '/Teeth-whitening-in-faisalabad',
   },
   {
     title: 'Smile Makeover',
     description: 'Custom cosmetic dentistry plans combining veneers, crowns, and whitening for complete smile transformation.',
-    image: '/public/assets/images/sm.png',
+    image: '/assets/images/sm.png',
     link: '/Smile-Makeover-faisalabad',
   },
   {
     title: 'Veneers in Faisalabad',
     description: 'Custom-crafted porcelain veneers to correct chips, gaps, and discoloration with natural-looking results.',
-    image: '/public/assets/images/v.png',
+    image: '/assets/images/v.png',
     link: '/veneers-faisalabad',
   },
 
@@ -63,26 +63,26 @@ const services = [
   {
     title: 'Dental Fillings',
     description: 'Tooth-colored composite fillings that match your natural tooth enamel and prevent future decay.',
-    image: '/public/assets/images/fil.png',
+    image: '/assets/images/fil.png',
     link: '/Dental-Fillings-faisalabad',
   },
   {
     title: 'Dental Crowns & Bridges',
     description: 'CEREC same-day ceramic crowns and fixed bridges to restore functionality and aesthetics of damaged teeth.',
-    image: '/public/assets/images/dcb.png',
+    image: '/assets/images/dcb.png',
     link: '/Dental-Crown-Bridges-Faisalabad',
   },
   {
     title: 'Dental Implants in Faisalabad',
     description: 'Permanent titanium implant solutions with natural-looking crowns, restoring 100% chewing function.',
-    image: '/public/assets/images/dental-implants.png',
+    image: '/assets/images/dental-implants.png',
     link: '/Dental-implants-Faisalabad',
   },
    // Orthodontics
   {
     title: 'Braces & Aligners',
     description: 'Straighten your teeth with fixed or removable options.',
-    image: '/public/assets/images/braces.png',
+    image: '/assets/images/braces.png',
     link: '/braces-aligners-faisalabad',
   },
 
@@ -90,13 +90,13 @@ const services = [
   {
     title: 'Root Canal Treatment (RCT)',
     description: 'Pain-free root canal procedures.',
-    image: '/public/assets/images/root-canal.png',
+    image: '/assets/images/root-canal.png',
     link: '/root-canal-faisalabad',
   },
   {
     title: 'Wisdom Tooth Extraction',
     description: 'Safe removal of impacted wisdom teeth.',
-    image: '/public/assets/images/wisdom.png',
+    image: '/assets/images/wisdom.png',
     link: '/wisdom-tooth-extraction',
   },
 
@@ -104,7 +104,7 @@ const services = [
   {
     title: 'Pediatric Dentistry in Faisalabad',
     description: 'Gentle dental care for children.',
-    image: '/public/assets/images/pediatric.png',
+    image: '/assets/images/pediatric.png',
     link: '/kids-dentist-faisalabad',
   },
 
@@ -112,7 +112,7 @@ const services = [
   {
     title: 'Gum Disease Treatment',
     description: 'Treat gingivitis & advanced gum issues.',
-    image: '/public/assets/images/gum.png',
+    image: '/assets/images/gum.png',
     link: '/gum-disease-treatment',
   },
 
@@ -120,7 +120,7 @@ const services = [
   {
     title: 'Emergency Dentist in Faisalabad',
     description: '24/7 urgent dental care.',
-    image: '/public/assets/images/emergency.png',
+    image: '/assets/images/emergency.png',
     link: '/emergency-dentist-faisalabad',
   },
 
@@ -128,19 +128,19 @@ const services = [
   {
     title: 'Maxillofacial Surgery',
     description: 'Advanced facial and jaw surgeries.',
-    image: '/public/assets/images/max.png',
+    image: '/assets/images/max.png',
     link: '/maxillofacial-surgery',
   },
   {
     title: 'TMJ / Jaw Pain Treatment',
     description: 'Relieve chronic jaw pain with expert care.',
-    image: '/public/assets/images/jaw.png',
+    image: '/assets/images/jaw.png',
     link: '/tmj-treatment-faisalabad',
   },
 {
 title:"Zarconia crown",
 description:"Restore your smile with our realistic looking zirconia crown",
-image:"/public/assets/images/zirconia1.png",
+image:"/assets/images/zirconia1.png",
 link:"/tmj-treatment-faisalabad"
 }
   // ... (Update other service objects similarly with images and enhanced descriptions)
@@ -148,7 +148,7 @@ link:"/tmj-treatment-faisalabad"
 
 const FeaturedServices = () => {
   return ( <section className="bg-fixed bg-white py-16"  style={{
-        backgroundImage: `url('/public/assets/images/office.jpg')`, // Replace with actual image path
+        backgroundImage: `url('/assets/images/office.jpg')`, // Replace with actual image path
         marginTop: 0,
         marginBottom: 0,
       }} id="services">

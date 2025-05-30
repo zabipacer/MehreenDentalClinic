@@ -4,62 +4,62 @@ const testimonials = [
   {
     name: "Ayesha R.",
     text: "Dr. Ali gave me my confidence back! Best veneers in Faisalabad!",
-    image: "/public/assets/images/T1.jpg",
+    image: "/assets/images/T1.jpg",
   },
   {
     name: "Hamza T.",
     text: "Finally found a pain-free dentist in Faisalabad. Amazing root canal experience.",
-    image: "/public/assets/images/T2.jpg",
+    image: "/assets/images/T2.jpg",
   },
   {
     name: "Sara M.",
     text: "The smile makeover was life-changing. Best cosmetic dentist in Faisalabad!",
-    image: "/public/assets/images/T3.jpg",
+    image: "/assets/images/T3.jpg",
   },
   {
     name: "Muhammad Ibrahim",
     text: "Very competent and humble doctor.",
-    image: "/public/assets/images/ibrahim.png",
+    image: "/assets/images/ibrahim.png",
   },
   {
     name: "Dr. Urooj Muddasar",
     text: "I went to doctor for the solution of my broken teeth. He treated me very well; the procedure he opted was professional.",
-    image: "/public/assets/images/urooj.png",
+    image: "/assets/images/urooj.png",
   },
   {
     name: "Faisal Ramzii",
     text: "Keepin' it simple, I came to Pak from KSA and visited Dr. Tajwer. After consulting and getting quotes from others, I chose them.",
-    image: "/public/assets/images/faisal.png",
+    image: "/assets/images/faisal.png",
   },
   {
     name: "Amir James",
     text: "Doctor Mohsin Refique is very nice. He provided exceptional care and service.",
-    image: "/public/assets/images/amir1.png",
+    image: "/assets/images/amir1.png",
   },
   {
     name: "Shahid Rasool",
     text: "Extraordinary satisfaction! Very friendly and experienced doctor. Highly recommended.",
-    image: "/public/assets/images/shahid.png",
+    image: "/assets/images/shahid.png",
   },
   {
     name: "Nauman Sabir",
     text: "Doc was very friendly and walked me through the entire process. Great experience!",
-    image: "/public/assets/images/nauman.png",
+    image: "/assets/images/nauman.png",
   },
   {
     name: "Areej Kashif",
     text: "Excellent experience with my family. Doctor was very friendly and efficient. Highly recommended Dr. Tajwer!",
-    image: "/public/assets/images/areej.png",
+    image: "/assets/images/areej.png",
   },
   {
     name: "Kashif Ali",
     text: "Best in town. Affordable, excellent, and quick service. Highly recommended.",
-    image: "/public/assets/images/kashif.png",
+    image: "/assets/images/kashif.png",
   },
   {
     name: "Kiran Kashif",
     text: "Very professional. Satisfied Alhamdulillah.",
-    image: "/public/assets/images/kiran.png",
+    image: "/assets/images/kiran.png",
   },
 ];
 

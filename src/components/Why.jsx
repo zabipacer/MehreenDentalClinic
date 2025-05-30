@@ -35,7 +35,7 @@ const WhyChooseUs = () => {
         {/* Image */}
         <div className="w-full">
           <img
-            src="/public/assets/images/modern.jpg"
+            src="/assets/images/modern.jpg"
             alt="Modern dental clinic in Faisalabad"
             className="rounded-2xl shadow-xl w-full object-cover"
           />
