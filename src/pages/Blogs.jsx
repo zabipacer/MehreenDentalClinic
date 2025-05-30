@@ -13,17 +13,17 @@ export const blogs = [
   { 
     id: 1, 
     title: "Best Dentist Near Satiana Road Faisalabad – What to Expect",
-    image: "/public/assets/images/urooj.png"
+    image: "/assets/images/urooj.png"
   },
   { 
     id: 2, 
     title: "Braces Price in Faisalabad – Updated 2025 Guide",
-    image: "/public/assets/images/braces.png"
+    image: "/assets/images/braces.png"
   },
   { 
     id: 3, 
     title: "Top 5 Dental Clinics in Faisalabad (And Why We Stand Out)",
-    image: "/public/assets/images/emergency.png"
+    image: "/assets/images/emergency.png"
   },
   { 
     id: 4, 
@@ -31,7 +31,7 @@ export const blogs = [
     image: "/polish.webp"
   },
    { id: 5, title: "Female Dentist Near Satiana Road Faisalabad – Comfort & Care" ,
-      image: "/public/assets/images/urooj.png"
+      image: "/assets/images/urooj.png"
   
    },
  
