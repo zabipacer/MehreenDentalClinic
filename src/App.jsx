@@ -13,7 +13,8 @@ import Footer from './components/Footer'
 import TestimonialsA from './components/ApiTestimonial'
 import TopBar from './components/TopBar'
 import AppointmentBanner from './components/Appointmentbanner'
-import DoctorTeethIntro from './components/DTIntro'
+import MehreenIntro from './components/DTIntro'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,7 +24,7 @@ function App() {
   
 <HeroSection/>
 <AppointmentBanner/>
-<DoctorTeethIntro/>
+<MehreenIntro/>
 <FeaturedServices/>
 <WhyChooseUs/>
 

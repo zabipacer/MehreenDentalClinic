@@ -23,7 +23,7 @@ export const Navbar = () => {
             className="w-12 h-12 rounded-full object-cover"
           />
           <span className="text-xl sm:text-2xl  text-blue-800 font-extrabold ">
-            Doctor Teeth Clinic
+            Mehreen Dental Clinic
           </span>
         </Link>
 
