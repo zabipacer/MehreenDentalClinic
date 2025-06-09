@@ -190,7 +190,7 @@ export default function HeroSection() {
                 href="tel:+923331936193"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-lg text-sm sm:text-base lg:text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl text-center"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 sm:px-2 sm:py-4 rounded-lg sm:w-[550px] text-sm sm:text-base lg:text-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl text-center"
               >
                 📞 Call Now: +92 333 1936193
               </motion.a>
@@ -199,7 +199,7 @@ export default function HeroSection() {
                 href="https://wa.me/923331936193"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-6 py-3 sm:px-8 sm:py-4 rounded-lg text-sm sm:text-base lg:text-lg font-semibold transition-all duration-300 backdrop-blur-sm text-center"
+                className="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-6 py-3 sm:w-[550px] sm:px-8 sm:py-4 rounded-lg text-sm sm:text-base lg:text-lg font-semibold transition-all duration-300 backdrop-blur-sm text-center"
               >
                 💬 {slides[current].cta}
               </motion.a>
