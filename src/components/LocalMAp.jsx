@@ -32,10 +32,16 @@ const LocalSEOSection = () => {
             above Allied Bank, Gulrez Housing Scheme, Rawalpindi, Punjab 46000, PK.
           </p>
           <p className="text-lg text-gray-700 mb-4">
-            <strong>Phone:</strong>{" "}
+            <strong>Phone 1:</strong>{" "}
             <a href="tel:+923331936193" className="text-blue-600 hover:underline">
               +92 333 1936193
             </a>
+            <br/>
+            <strong>Phone 2:</strong>{" "}
+             <a href="tel:+923008890174" className="text-blue-600 hover:underline">
+              +92 300 8890174
+            </a>
+             
           </p>
           <p className="text-lg text-gray-700 mb-4">
             <strong>Service Areas:</strong> Gulrez Housing Scheme, Saddar Rawalpindi,

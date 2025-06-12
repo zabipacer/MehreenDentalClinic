@@ -38,8 +38,19 @@ const AppointmentBanner = () => {
               href="tel:+923331936193"
               className="underline hover:text-yellow-300 font-medium"
             >
-              +92 333 1936193
+              +92 333 1936193  
             </a>
+            <p>
+              -    
+            </p>
+            
+              <a
+              href="tel:923008890174"
+              className="underline hover:text-yellow-300 font-medium"
+            >
+               +92 300 8890174
+            </a>
+           
           </motion.p>
         </AnimatePresence>
       </div>
